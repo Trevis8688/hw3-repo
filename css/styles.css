@@ -1,0 +1,30 @@
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #c5d1ff;
+    color: white;
+    /*padding: 15px 20px;*/
+}
+
+.nav-links {
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 550;
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+
+
+.nav-links a {
+    color: #0026c5;
+    text-decoration: none;
+}
+
+
+/*.josefin-sans-nav-links {*/
+/*    font-family: "Josefin Sans", serif;*/
+/*    font-optical-sizing: auto;*/
+
+/*    font-style: normal;*/
+/*}*/
