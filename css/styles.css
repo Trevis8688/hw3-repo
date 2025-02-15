@@ -1,8 +1,16 @@
 @import url('fonts.css');
 
-
+:root {
+    --primary-font: 'Noto Sans JP', sans-serif;
+    --secondary-font: 'Josefin Sans', sans-serif;
+    --background-color: #cce0ff;
+    --background-secondary: #f8f9fa;
+    --accent-color: #007bff;
+}
 * {
-    font-family: 'Noto Sans JP', sans-serif;
+    /**/
+    font-family: var(--primary-font), sans-serif;
+
 }
 
 /* Navbar Container */
@@ -11,7 +19,7 @@
     justify-content: space-between;
     align-items: center;
     padding: 15px 20px;
-    background-color: #cce0ff;
+    background-color: var(--background-color);
     border-bottom: 2px solid #bbb;
 }
 
@@ -31,7 +39,7 @@
     text-decoration: none;
     font-size: 1rem;
     font-weight: 600;
-    color: #0056b3;
+    color: var(--accent-color);
     padding: 10px 15px;
     transition: 0.3s ease;
 }
@@ -39,7 +47,7 @@
 /* Hamburger Icon (Hidden by Default) */
 .hamburger {
     display: none; /* Shown only on small screens */
-    font-size: 2rem;
+    font-size: 1.5rem;
     cursor: pointer;
 }
 
@@ -49,6 +57,11 @@
     .profile-pic {
         width: 200px; /* Reduce image size for tablets */
     }
+
+    .projects {
+        display: flex;
+        flex-direction: column;
+    }
 }
 
 /* Small Screens - Mobile Device (Under 768px) */
@@ -57,7 +70,7 @@
     .nav-links {
         display: none; /* Hide menu by default */
         flex-direction: column;
-        background: #cce0ff;
+        background: var(--background-color);
         position: absolute;
         top: 60px;
         right: 0;
@@ -81,33 +94,40 @@
 }
 
 
+li {
+    list-style: none;
+}
 
+em {
+    font-weight: bold;
+    font-style: normal;
+    font-family: var(--secondary-font), sans-serif;
+}
 
 /* General header styling */
 header {
     text-align: center;
     padding: 40px 20px;
-    background-color: #f8f9fa; /* Light gray for a clean look */
+    background-color: var(--background-secondary); /* Light gray for a clean look */
     border-bottom: 2px solid #ddd;
 }
 
-/* hgroup styling (acts as a container for headings) */
 hgroup {
     margin-bottom: 10px;
 }
 
-/* Main heading (name) */
 h1 {
     font-size: 2.5rem;
     font-weight: 700;
     margin-bottom: 5px;
 }
 
-/* Subheading */
 h2 {
     font-size: 1.5rem;
-    font-weight: 500;
-    color: #555;
+    font-weight: bold;
+    color: var(--accent-color);
+    border-bottom: 2px solid var(--accent-color);
+    padding-bottom: 5px;
 }
 
 /* Highlight class for subheading */
@@ -135,13 +155,64 @@ header p {
 }
 
 
-
+/* Quote */
 blockquote {
     font-size: 1.2rem;
     font-style: italic;
     color: #444;
-    border-left: 3px solid #007BFF;
+    border-left: 3px solid var(--accent-color);
     padding: 8px 15px;
     margin: 15px 0;
-    background-color: #f9f9f9;
+    background-color: var(--background-secondary);
 }
+
+/*style="display: flex; justify-content: space-around;"*/
+.project-img {
+    width: 250px;
+    height: 250px;
+    border: 3px solid var(--accent-color);
+    border-radius: 5px;
+}
+
+.projects {
+    display: flex;
+    justify-content: space-around;
+}
+
+
+
+
+
+/* Coursework Section */
+#coursework {
+    /*max-width: 800px;*/
+    margin: 30px auto;  /* Centers the section */
+    padding: 20px;
+    background: var(--background-secondary); /* Light background */
+    border-radius: 8px;
+}
+
+/* List Style */
+#coursework ul {
+    list-style: none;
+    padding: 0;
+}
+
+/* Each List Item */
+#coursework li {
+    margin-bottom: 15px;
+    padding: 10px;
+    background: white;
+    border-left: 4px solid var(--accent-color); /* Accent border */
+    border-radius: 5px;
+}
+
+/* Contact Section Styling */
+section, aside {
+    margin: 30px auto;
+    padding: 20px;
+    background: var(--background-secondary);
+    border-radius: 8px;
+}
+
+

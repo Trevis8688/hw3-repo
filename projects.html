@@ -11,6 +11,9 @@
 
 <!-- Navigation Bar -->
 <nav class="navbar">
+    <div class="hamburger" onclick="toggleMenu()">
+        ☰
+    </div>
     <ul class="nav-links">
         <li><a href="index.html">Home</a></li>
         <li><a href="projects.html">Projects</a></li>
@@ -30,22 +33,12 @@
 <main>
 
 
-    <label for="tech">Choose a technology:</label>
-    <input list="technologies" id="tech" name="tech">
-    <datalist id="technologies">
-        <option value="HTML">
-        <option value="CSS">
-        <option value="JavaScript">
-        <option value="Python">
-        <option value="Java">
-    </datalist>
-    <button>Find</button>
+
+
     <!-- Project Grid Layout -->
     <div class="projects">
-    <section style="display: flex; justify-content: space-around;">
-
         <figure>
-            <img src="assets/project1.png" alt="Project 1 Preview" width="250" height="250">
+            <img src="assets/project1.png" alt="Project 1 Preview" width="250" height="250" class="project-img">
             <figcaption>
                 <p><strong>Project 1</strong></p>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
@@ -54,7 +47,7 @@
         </figure>
 
         <figure>
-            <img src="assets/project2.png" alt="Project 2 Preview" width="250" height="250">
+            <img src="assets/project2.png" alt="Project 2 Preview" width="250" height="250" class="project-img">
             <figcaption>
                 <p><strong>Project 2</strong></p>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
@@ -63,16 +56,13 @@
         </figure>
 
         <figure>
-            <img src="assets/project3.png" alt="Project 3 Preview" width="250" height="250">
+            <img src="assets/project3.png" alt="Project 3 Preview" width="250" height="250" class="project-img">
             <figcaption>
                 <p><strong>Project 3</strong></p>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
                 <a href="#">View Project</a>
             </figcaption>
         </figure>
-
-    </section>
-
     </div>
 
     <section id="coursework">

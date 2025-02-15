@@ -11,6 +11,9 @@
 
 <!-- Navigation -->
 <nav class="navbar">
+  <div class="hamburger" onclick="toggleMenu()">
+    ☰
+  </div>
   <ul class="nav-links">
     <li><a href="index.html">Home</a></li>
     <li><a href="projects.html">Projects</a></li>
@@ -131,7 +134,16 @@
     </msup>
   </math>
 
-
+  <label for="tech">Choose a technology:</label>
+  <input list="technologies" id="tech" name="tech">
+  <datalist id="technologies">
+    <option value="HTML">
+    <option value="CSS">
+    <option value="JavaScript">
+    <option value="Python">
+    <option value="Java">
+  </datalist>
+  <button>Find</button>
 
 </main>
 
