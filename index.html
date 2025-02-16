@@ -12,19 +12,6 @@
 </head>
 <body>
 
-<!-- Navigation Bar -->
-<!--<template>-->
-<!--    <nav>-->
-<!--        <ul>-->
-<!--            <li><a href="index.html">Home</a></li>-->
-<!--            <li><a href="projects.html">Projects</a></li>-->
-<!--            <li><a href="contact.html">Contact</a></li>-->
-<!--            <li><a href="resume.html">Resume</a></li>-->
-<!--            <li><a href="lab.html">Lab</a></li>-->
-<!--        </ul>-->
-<!--    </nav>-->
-<!--</template>-->
-
 <nav class="navbar">
     <div class="hamburger" onclick="toggleMenu()">
         ☰
@@ -46,7 +33,12 @@
         <h1>Trevor Duong</h1>
         <h2><span class="highlight">Computer Science Student | Aspiring Software Engineer</span></h2>
     </hgroup>
-    <img class="profile-pic" src="assets/Trevor.jpg" alt="profile picture">
+
+    <picture class="profile-pic">
+        <source srcset="assets/Trevor-Small.jpg" media="(max-width: 480px)">
+        <source srcset="assets/Trevor-Medium.jpg" media="(max-width: 1024px)">
+        <img src="assets/Trevor-Large.jpg" alt="profile picture" loading="lazy">
+    </picture>
 
     <p>Welcome to my portfolio! Explore my projects, experience, and how to contact me.</p>
 </header>

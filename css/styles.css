@@ -51,11 +51,20 @@
     cursor: pointer;
 }
 
+/* Default - Desktop */
+.profile-pic img{
+    width: 100%;
+    height: auto;
+    max-width: 300px;
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 10px;
+}
 
 /* Medium Screens - Tablet (768px - 1024px) */
 @media (max-width: 1024px) {
-    .profile-pic {
-        width: 200px; /* Reduce image size for tablets */
+    .profile-pic img {
+        max-width: 200px; /* Reduce image size for tablets */
     }
 
     .projects {
@@ -88,15 +97,12 @@
         display: flex;
     }
 
-    .profile-pic {
-        width: 150px; /* Even smaller for phones */
+    .profile-pic img {
+        max-width: 150px; /* Even smaller for phones */
     }
 }
 
 
-li {
-    list-style: none;
-}
 
 em {
     font-weight: bold;
@@ -144,15 +150,7 @@ header p {
     margin: 0 auto;
 }
 
-/* Default - Desktop */
-.profile-pic {
-    width: 300px;
-    height: auto;
-    max-width: 100%;
-    display: block;
-    margin: 0 auto;
-    margin-bottom: 10px;
-}
+
 
 
 /* Quote */
@@ -167,7 +165,7 @@ blockquote {
 }
 
 /*style="display: flex; justify-content: space-around;"*/
-.project-img {
+.project-img img{
     width: 250px;
     height: 250px;
     border: 3px solid var(--accent-color);
@@ -182,29 +180,20 @@ blockquote {
 
 
 
-
-/* Coursework Section */
-#coursework {
-    /*max-width: 800px;*/
-    margin: 30px auto;  /* Centers the section */
-    padding: 20px;
-    background: var(--background-secondary); /* Light background */
-    border-radius: 8px;
-}
-
 /* List Style */
-#coursework ul {
+#coursework ul, #skills ol {
     list-style: none;
     padding: 0;
 }
 
 /* Each List Item */
-#coursework li {
+#coursework li, #skills li {
     margin-bottom: 15px;
     padding: 10px;
     background: white;
     border-left: 4px solid var(--accent-color); /* Accent border */
     border-radius: 5px;
+    list-style: none;
 }
 
 /* Contact Section Styling */
@@ -214,5 +203,81 @@ section, aside {
     background: var(--background-secondary);
     border-radius: 8px;
 }
+
+/* Button */
+button {
+    width: 20rem;
+    background: var(--accent-color);
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #0056b3;
+}
+
+details {
+    background: white;
+    border: 1px solid var(--accent-color);
+    border-radius: 5px;
+    margin-bottom: 10px;
+    padding: 10px;
+    cursor: pointer;
+}
+
+summary {
+    cursor: pointer;
+}
+
+iframe {
+    width: 100%;
+    height: 500px;
+}
+
+/* Table Styling */
+table {
+    width: 100%;
+    max-width: 600px;
+    margin: 20px auto;
+    border-collapse: collapse;
+}
+
+/* Table Headers */
+th {
+    background: var(--accent-color);
+    color: white;
+    padding: 8px;
+    text-align: left;
+}
+
+/* Table Cells */
+td {
+    padding: 8px;
+    border-bottom: 1px solid #ccc;
+}
+
+dl {
+    margin: 15px auto;
+    padding: 10px;
+    background: var(--background-secondary);
+    border-radius: 5px;
+}
+
+/* Definition Term (Title) */
+dt {
+    font-size: 1.2rem;
+    color: var(--accent-color);
+}
+
+/* Definition Description (Details) */
+dd {
+    margin-left: 20px;
+    font-size: 1rem;
+}
+
+
 
 

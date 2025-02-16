@@ -38,7 +38,11 @@
     <!-- Project Grid Layout -->
     <div class="projects">
         <figure>
-            <img src="assets/project1.png" alt="Project 1 Preview" width="250" height="250" class="project-img">
+            <picture class="project-img">
+                <source srcset="assets/project1-small.jpg" media="(max-width: 480px)">
+                <source srcset="assets/project1-medium.jpg" media="(max-width: 1024px)">
+                <img src="assets/project1-large.jpg" alt="Project 1 Preview" loading="lazy">
+            </picture>
             <figcaption>
                 <p><strong>Project 1</strong></p>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
@@ -47,7 +51,12 @@
         </figure>
 
         <figure>
-            <img src="assets/project2.png" alt="Project 2 Preview" width="250" height="250" class="project-img">
+
+            <picture class="project-img">
+                <source srcset="assets/project2-small.jpg" media="(max-width: 480px)">
+                <source srcset="assets/project2-medium.jpg" media="(max-width: 1024px)">
+                <img src="assets/project2-large.jpg" alt="Project 2 Preview" loading="lazy">
+            </picture>
             <figcaption>
                 <p><strong>Project 2</strong></p>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
@@ -56,7 +65,11 @@
         </figure>
 
         <figure>
-            <img src="assets/project3.png" alt="Project 3 Preview" width="250" height="250" class="project-img">
+            <picture class="project-img">
+                <source srcset="assets/project3-small.jpg" media="(max-width: 480px)">
+                <source srcset="assets/project3-medium.jpg" media="(max-width: 1024px)">
+                <img src="assets/project3-large.jpg" alt="Project 3 Preview" loading="lazy">
+            </picture>
             <figcaption>
                 <p><strong>Project 3</strong></p>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
