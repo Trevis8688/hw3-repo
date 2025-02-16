@@ -3,14 +3,24 @@
 :root {
     --primary-font: 'Noto Sans JP', sans-serif;
     --secondary-font: 'Josefin Sans', sans-serif;
-    --background-color: #cce0ff;
+    --background-color: color-mix(in srgb, var(--accent-color), white 80%);
     --background-secondary: #f8f9fa;
+    --border-primary: color-mix(in srgb, var(--background-secondary), black 20%);
     --accent-color: #007bff;
+    --accent-dark: color-mix(in srgb, var(--accent-color), black 30%);
 }
 * {
-    /**/
     font-family: var(--primary-font), sans-serif;
 
+}
+
+body {
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
 }
 
 /* Navbar Container */
@@ -21,6 +31,7 @@
     padding: 15px 20px;
     background-color: var(--background-color);
     border-bottom: 2px solid #bbb;
+    width: 97dvw;
 }
 
 /* Navigation Links */
@@ -64,7 +75,7 @@
 /* Medium Screens - Tablet (768px - 1024px) */
 @media (max-width: 1024px) {
     .profile-pic img {
-        max-width: 200px; /* Reduce image size for tablets */
+        max-width: 200px;
     }
 
     .projects {
@@ -73,28 +84,22 @@
     }
 }
 
-/* Small Screens - Mobile Device (Under 768px) */
-/* Responsive Design */
+/* Small Screens / Mobile Device (Under 768px) */
 @media (max-width: 768px) {
     .nav-links {
-        display: none; /* Hide menu by default */
-        flex-direction: column;
-        background: var(--background-color);
-        position: absolute;
-        top: 60px;
-        right: 0;
-        width: 100%;
-        text-align: center;
-        padding: 20px 0;
+        display: none;
+        /*flex-direction: column;*/
+        /*background: var(--background-color);*/
+        /*position: absolute;*/
+        /*top: 60px;*/
+        /*right: 0;*/
+        /*width: 100%;*/
+        /*text-align: center;*/
+        /*padding: 20px 0;*/
     }
 
     .hamburger {
         display: block; /* Show hamburger icon */
-    }
-
-    /* Show menu when active */
-    .nav-links.active {
-        display: flex;
     }
 
     .profile-pic img {
@@ -103,7 +108,7 @@
 }
 
 
-
+/* em styling */
 em {
     font-weight: bold;
     font-style: normal;
@@ -115,7 +120,7 @@ header {
     text-align: center;
     padding: 40px 20px;
     background-color: var(--background-secondary); /* Light gray for a clean look */
-    border-bottom: 2px solid #ddd;
+    border-bottom: 2px solid var(--border-primary);
 }
 
 hgroup {
@@ -136,16 +141,11 @@ h2 {
     padding-bottom: 5px;
 }
 
-/* Highlight class for subheading */
-.highlight {
-    color: #007bff;
-    font-weight: 600;
-}
 
 /* Header paragraph */
 header p {
     font-size: 1.2rem;
-    color: #666;
+    color: #444;
     max-width: 600px;
     margin: 0 auto;
 }
@@ -164,12 +164,15 @@ blockquote {
     background-color: var(--background-secondary);
 }
 
-/*style="display: flex; justify-content: space-around;"*/
 .project-img img{
     width: 250px;
     height: 250px;
     border: 3px solid var(--accent-color);
     border-radius: 5px;
+}
+
+.project-img img:hover {
+    transform: scale(1.1);
 }
 
 .projects {
@@ -191,7 +194,7 @@ blockquote {
     margin-bottom: 15px;
     padding: 10px;
     background: white;
-    border-left: 4px solid var(--accent-color); /* Accent border */
+    border-left: 4px solid var(--accent-color);
     border-radius: 5px;
     list-style: none;
 }
@@ -204,6 +207,11 @@ section, aside {
     border-radius: 8px;
 }
 
+section:has(img) {
+    border-left: 4px solid var(--accent-color);
+    padding-left: 15px;
+}
+
 /* Button */
 button {
     width: 20rem;
@@ -213,10 +221,12 @@ button {
     border: none;
     border-radius: 4px;
     cursor: pointer;
+    transition: background 0.3s ease-in-out, transform 0.2s;
 }
 
 button:hover {
-    background: #0056b3;
+    background: var(--accent-dark);
+    transform: scale(1.05);
 }
 
 details {
@@ -233,11 +243,11 @@ summary {
 }
 
 iframe {
-    width: 100%;
+    width: 90dvw;
     height: 500px;
 }
 
-/* Table Styling */
+
 table {
     width: 100%;
     max-width: 600px;
@@ -245,7 +255,7 @@ table {
     border-collapse: collapse;
 }
 
-/* Table Headers */
+
 th {
     background: var(--accent-color);
     color: white;
@@ -253,7 +263,7 @@ th {
     text-align: left;
 }
 
-/* Table Cells */
+
 td {
     padding: 8px;
     border-bottom: 1px solid #ccc;
@@ -266,13 +276,12 @@ dl {
     border-radius: 5px;
 }
 
-/* Definition Term (Title) */
+
 dt {
     font-size: 1.2rem;
     color: var(--accent-color);
 }
 
-/* Definition Description (Details) */
 dd {
     margin-left: 20px;
     font-size: 1rem;
